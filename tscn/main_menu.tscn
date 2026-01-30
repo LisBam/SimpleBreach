@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://d0hvsx7ldguoa"]
+
+[ext_resource type="Texture2D" uid="uid://tecdavun2ak6" path="res://res/background/black.png" id="1_hpdlp"]
+[ext_resource type="Script" uid="uid://dp2gjle6hcc7p" path="res://script/button_script.gd" id="3_ukx4d"]
+[ext_resource type="Script" uid="uid://bwkjsqi00wbvl" path="res://script/enter_animation.gd" id="4_cpdt8"]
+[ext_resource type="Theme" uid="uid://bfll7y5us2jp3" path="res://theme/main_menu.tres" id="6_p6scp"]
+
+[node name="MainMenu" type="Node2D" unique_id=1899020258]
+
+[node name="Camera" type="Camera2D" parent="." unique_id=1651638629]
+position = Vector2(640.00006, 360)
+scale = Vector2(1.6435548, 1.4077148)
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1576970401]
+position = Vector2(553.99994, 302.99997)
+scale = Vector2(1.6435548, 1.4077148)
+texture = ExtResource("1_hpdlp")
+
+[node name="ButtonEnterGame" type="Button" parent="." unique_id=478023979]
+offset_left = 560.0
+offset_top = 630.0
+offset_right = 720.0
+offset_bottom = 710.0
+pivot_offset = Vector2(80, 40)
+theme = ExtResource("6_p6scp")
+text = "进入战场"
+script = ExtResource("3_ukx4d")
+
+[node name="ButtonBag" type="Button" parent="." unique_id=1394521805]
+offset_left = 459.0
+offset_top = 662.0
+offset_right = 555.0
+offset_bottom = 710.0
+pivot_offset = Vector2(80, 40)
+theme = ExtResource("6_p6scp")
+text = "背包"
+script = ExtResource("3_ukx4d")
+
+[node name="EnterAnimation" type="ColorRect" parent="." unique_id=1951482078]
+visible = false
+offset_left = -1087.0
+offset_top = -773.0
+offset_right = 2217.0
+offset_bottom = 1403.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.78431374)
+script = ExtResource("4_cpdt8")
+
+[connection signal="button_down" from="ButtonEnterGame" to="ButtonEnterGame" method="_on_button_down"]
+[connection signal="button_up" from="ButtonEnterGame" to="ButtonEnterGame" method="_on_button_up"]
+[connection signal="mouse_entered" from="ButtonEnterGame" to="ButtonEnterGame" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ButtonEnterGame" to="ButtonEnterGame" method="_on_mouse_exited"]
+[connection signal="pressed" from="ButtonEnterGame" to="ButtonEnterGame" method="_on_pressed"]
+[connection signal="button_down" from="ButtonBag" to="ButtonBag" method="_on_button_down"]
+[connection signal="button_up" from="ButtonBag" to="ButtonBag" method="_on_button_up"]
+[connection signal="mouse_entered" from="ButtonBag" to="ButtonBag" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ButtonBag" to="ButtonBag" method="_on_mouse_exited"]

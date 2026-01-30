@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bcflwsmno1nfw"]
+
+[ext_resource type="Texture2D" uid="uid://c7uxuons4qmgn" path="res://res/player/player_1.png" id="1_7omxl"]
+[ext_resource type="Script" uid="uid://cnhrr6ib82kmc" path="res://script/player.gd" id="1_u4c7w"]
+[ext_resource type="Script" uid="uid://1p7jgyr3dese" path="res://script/move_component.gd" id="2_7omxl"]
+[ext_resource type="Script" uid="uid://n5ofu3reslaf" path="res://script/attack_component.gd" id="3_3c7ea"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7omxl"]
+size = Vector2(38, 38)
+
+[node name="Player" type="CharacterBody2D" unique_id=103624559]
+motion_mode = 1
+script = ExtResource("1_u4c7w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2081171446]
+shape = SubResource("RectangleShape2D_7omxl")
+
+[node name="Camera" type="Camera2D" parent="." unique_id=1230122382]
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1293208525]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_7omxl")
+
+[node name="MoveComponent" type="Node2D" parent="." unique_id=970701076 node_paths=PackedStringArray("host")]
+script = ExtResource("2_7omxl")
+host = NodePath("..")
+
+[node name="AttackComponent" type="Node2D" parent="." unique_id=1729815924 node_paths=PackedStringArray("host")]
+script = ExtResource("3_3c7ea")
+host = NodePath("..")

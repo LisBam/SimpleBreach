@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://h3qegnoxe7ho"]
+
+[ext_resource type="Script" uid="uid://c7wp4b55o7ck5" path="res://script/base/enemy_base.gd" id="1_aog2s"]
+[ext_resource type="Texture2D" uid="uid://belu0crwj11iw" path="res://res/player/player_red.png" id="1_ouhn1"]
+[ext_resource type="Texture2D" uid="uid://bnq1hap2ryxpm" path="res://res/face_marker/face_marker_red.png" id="2_atto4"]
+[ext_resource type="Script" uid="uid://drdv0kl052fjy" path="res://script/face_marker.gd" id="3_aog2s"]
+[ext_resource type="Script" uid="uid://c1belt0koadmd" path="res://script/conponent/hp_component.gd" id="4_atto4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aa1dl"]
+size = Vector2(38, 38)
+
+[node name="EnemyBase" type="CharacterBody2D" unique_id=1048114345 groups=["enemy"]]
+collision_layer = 4
+collision_mask = 23
+script = ExtResource("1_aog2s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1141373154]
+shape = SubResource("RectangleShape2D_aa1dl")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=431463715]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_ouhn1")
+
+[node name="face_marker" type="Sprite2D" parent="." unique_id=234033452]
+modulate = Color(1, 1, 1, 0.5882353)
+position = Vector2(25.999998, -1.2397766e-05)
+rotation = 1.5707964
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_atto4")
+script = ExtResource("3_aog2s")
+
+[node name="Component" type="Marker2D" parent="." unique_id=2103779482]
+
+[node name="HpComponent" type="Node2D" parent="Component" unique_id=1069289482]
+script = ExtResource("4_atto4")
+max_hp = null
+hp = null

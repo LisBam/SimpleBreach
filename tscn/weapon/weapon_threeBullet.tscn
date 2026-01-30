@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://2jixmbigbr6g"]
+
+[ext_resource type="Script" uid="uid://6nmp8jspquc2" path="res://script/weapon/weapon_three_bullet.gd" id="1_khimj"]
+[ext_resource type="Texture2D" uid="uid://c7uxuons4qmgn" path="res://res/player/player_1.png" id="1_vt6y0"]
+[ext_resource type="AudioStream" uid="uid://c5fftdft3qigg" path="res://res/audio/shoot.wav" id="3_jeb4e"]
+
+[node name="WeaponThreeBullet" type="Node2D" unique_id=1307545858]
+script = ExtResource("1_khimj")
+attack_cd = 1.0
+recoil = 1000.0
+startup_time = 0.2
+recovery_time = 0.4
+rotate_speed = 5.0
+speed_change_mul = 0.8
+shake_camera_force = 10.0
+speed = 1000.0
+damage = 40
+penetrate_count = 1
+bullet_distance = 500.0
+knockback_force = 2000.0
+bullet_scale_mul = 2.0
+
+[node name="BulletSpawnPosition" type="Marker2D" parent="." unique_id=358455024]
+position = Vector2(21, 0)
+
+[node name="BulletSpawnPosition2" type="Marker2D" parent="." unique_id=806863297]
+position = Vector2(21, -11)
+
+[node name="BulletSpawnPosition3" type="Marker2D" parent="." unique_id=108940042]
+position = Vector2(21, 11)
+
+[node name="AttackCDTimer" type="Timer" parent="." unique_id=1314768662]
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1171740486]
+visible = false
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_vt6y0")
+
+[node name="Audio" type="Marker2D" parent="." unique_id=2079555288]
+
+[node name="shoot" type="AudioStreamPlayer" parent="Audio" unique_id=193505105]
+stream = ExtResource("3_jeb4e")
+volume_db = 2.0
+pitch_scale = 0.9
+
+[connection signal="timeout" from="AttackCDTimer" to="." method="_on_attack_cd_timer_timeout"]
