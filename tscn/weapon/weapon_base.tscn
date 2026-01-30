@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://garliwv8t6jf"]
+
+[ext_resource type="Script" uid="uid://c2blp56cvttdl" path="res://script/weapon/weapon_base.gd" id="1_so7s4"]
+[ext_resource type="Texture2D" uid="uid://c7uxuons4qmgn" path="res://res/player/player_1.png" id="2_anf71"]
+[ext_resource type="AudioStream" uid="uid://c5fftdft3qigg" path="res://res/audio/shoot.wav" id="3_kxk8b"]
+
+[node name="Weapon" type="Node2D" unique_id=62083647]
+script = ExtResource("1_so7s4")
+shake_camera_force = 5.0
+
+[node name="BulletSpawnPosition" type="Marker2D" parent="." unique_id=161706405]
+position = Vector2(21, 0)
+
+[node name="AttackCDTimer" type="Timer" parent="." unique_id=45529326]
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=360519841]
+visible = false
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_anf71")
+
+[node name="Audio" type="Marker2D" parent="." unique_id=1205493411]
+
+[node name="shoot" type="AudioStreamPlayer" parent="Audio" unique_id=973069867]
+stream = ExtResource("3_kxk8b")
+
+[connection signal="timeout" from="AttackCDTimer" to="." method="_on_attack_cd_timer_timeout"]

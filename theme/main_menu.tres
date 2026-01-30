@@ -1,0 +1,40 @@
+[gd_resource type="Theme" format=3 uid="uid://bfll7y5us2jp3"]
+
+[ext_resource type="FontFile" uid="uid://i8fqbgji7krp" path="res://res/Uranus_Pixel_11Px.ttf" id="1_nj8yv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nj8yv"]
+draw_center = false
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.7342013, 0.7342014, 0.734201, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f5afg"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b0fqb"]
+draw_center = false
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.39145678, 0.39145684, 0.39145654, 1)
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(0.73333335, 0.73333335, 0.73333335, 1)
+Button/colors/font_pressed_color = Color(0.39215687, 0.39215687, 0.39215687, 1)
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_nj8yv")
+Button/styles/hover = SubResource("StyleBoxFlat_nj8yv")
+Button/styles/normal = SubResource("StyleBoxFlat_f5afg")
+Button/styles/pressed = SubResource("StyleBoxFlat_b0fqb")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/font_sizes/font_size = 32
+Label/fonts/font = ExtResource("1_nj8yv")

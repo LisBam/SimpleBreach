@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cvc0xat168obp"]
+
+[ext_resource type="Script" uid="uid://puqxftipsybc" path="res://script/map_1.gd" id="1_2o18l"]
+[ext_resource type="Texture2D" uid="uid://tecdavun2ak6" path="res://res/background/black.png" id="2_2o18l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2o18l"]
+bg_color = Color(0.17334506, 0.17334509, 0.17334497, 1)
+
+[node name="Map_1" type="Node2D" unique_id=1031302684]
+script = ExtResource("1_2o18l")
+
+[node name="Background_old" type="Sprite2D" parent="." unique_id=1790805490]
+visible = false
+scale = Vector2(20, 20)
+texture = ExtResource("2_2o18l")
+
+[node name="Background" type="Panel" parent="." unique_id=1976820388]
+offset_left = -5000.0
+offset_top = -5000.0
+offset_right = 5000.0
+offset_bottom = 5000.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2o18l")
