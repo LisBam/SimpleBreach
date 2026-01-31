@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://rxgty6wdbn0d" path="res://script/conponent/face_to_mouse_component.gd" id="5_6sl1v"]
 [ext_resource type="Script" uid="uid://cnkveajkutm5l" path="res://script/conponent/change_weapon_component.gd" id="8_ne3il"]
 [ext_resource type="Script" uid="uid://c1belt0koadmd" path="res://script/conponent/hp_component.gd" id="9_kai0q"]
-[ext_resource type="AudioStream" uid="uid://b8uwfwcs6kygh" path="res://res/audio/hurt.wav" id="11_nhqjh"]
+[ext_resource type="AudioStream" uid="uid://eysnrj4nekai" path="res://res/audio/Player_hurt2.ogg.mp3" id="11_nhqjh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7omxl"]
 size = Vector2(38, 38)

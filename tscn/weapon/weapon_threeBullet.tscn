@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://6nmp8jspquc2" path="res://script/weapon/weapon_three_bullet.gd" id="1_khimj"]
 [ext_resource type="Texture2D" uid="uid://c7uxuons4qmgn" path="res://res/player/player_1.png" id="1_vt6y0"]
-[ext_resource type="AudioStream" uid="uid://c5fftdft3qigg" path="res://res/audio/shoot.wav" id="3_jeb4e"]
+[ext_resource type="AudioStream" uid="uid://csoorthahtics" path="res://res/audio/gun_shoot.mp3" id="3_jeb4e"]
 
 [node name="WeaponThreeBullet" type="Node2D" unique_id=1307545858]
 script = ExtResource("1_khimj")
