@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://bgvxhtxe2115u" path="res://script/conponent/lock_target_component.gd" id="6_aa1dl"]
 [ext_resource type="Script" uid="uid://duemjf085ltr8" path="res://script/conponent/ai_move_component.gd" id="7_ntgp8"]
 [ext_resource type="Script" uid="uid://q1f635o4rqy4" path="res://script/conponent/ai_near_attack_component.gd" id="8_m45lj"]
-[ext_resource type="AudioStream" uid="uid://b8uwfwcs6kygh" path="res://res/audio/hurt.wav" id="9_cftlk"]
+[ext_resource type="AudioStream" uid="uid://eysnrj4nekai" path="res://res/audio/Player_hurt2.ogg.mp3" id="9_cftlk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aa1dl"]
 size = Vector2(38, 38)
@@ -75,6 +75,7 @@ shape = SubResource("RectangleShape2D_cftlk")
 
 [node name="hurt" type="AudioStreamPlayer" parent="Audio" unique_id=1344019038]
 stream = ExtResource("9_cftlk")
+pitch_scale = 1.2
 
 [connection signal="body_entered" from="Component/LockTargetComponent/LockArea" to="Component/LockTargetComponent" method="_on_lock_area_body_entered"]
 [connection signal="body_exited" from="Component/LockTargetComponent/LockArea" to="Component/LockTargetComponent" method="_on_lock_area_body_exited"]

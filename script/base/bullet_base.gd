@@ -44,6 +44,8 @@ func distance_to_queue(): #超出射程销毁
 func _on_body_entered(body: Node2D) -> void:
 	if has_hurt_target>penetrate_count:
 		return
+	if body.is_in_group("wall"):
+		queue_free()
 	if body.is_in_group("enemy"):
 		body.hurt(damage)
 		to_knock_back(body)
